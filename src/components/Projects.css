@@ -1,0 +1,54 @@
+.projects {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project_card {
+    background-color: var(--navbar-color);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2x 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.project_card h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+}
+
+.project_card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+}
+
+.project_card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.project_card a:hover {
+    text-decoration: underline;
+}
+
+.project_card svg {
+    color: red;
+    font-size: 50px;
+}
+
+.project_card span {
+    
+}
