@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import Navbar from './components/Navbar.js';
 import Projects from './components/Projects.js'
 import About from './components/About.js';
+import Skills from './components/Skills.js';
 import './App.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <About />
       <Projects />
+      <Skills />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

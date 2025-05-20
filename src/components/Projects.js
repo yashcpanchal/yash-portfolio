@@ -10,9 +10,11 @@ function Projects() {
                     <h3>{project.name}</h3>
                     <p>{project.description}</p>
                     <a href={project.github}> Github Link </a>
+                    <div className="icons">
                     {project.icons.map((icon, key) => (
                         <span key={key}>{icon}</span>
                     ))}
+                    </div>
                 </div>
             ))}
         </section>

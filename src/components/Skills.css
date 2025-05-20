@@ -1,0 +1,30 @@
+.skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skillcard {
+    background-color: var(--navbar-color);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2x 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    min-width: 300px; /* needs to be tailored to content*/
+    justify-content: space-between; /* spaces out internal content */
+}
+
+.skillcard side {
+    display: flex; /* makes items go side by side */
+    align-items: center; /* vertically aligns items */
+    gap: 20px; /* adds space between the image and the text*/
+}

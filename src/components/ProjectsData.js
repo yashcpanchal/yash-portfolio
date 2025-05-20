@@ -12,6 +12,12 @@ const projectsData = [
         description: "p2",
         github: "https://github.com/",
         icons: [<FaJava />, <FaHtml5 />]
+    },
+    {
+        name: "Project Three",
+        description: "p3",
+        github: "https://github.com/",
+        icons: [<FaJava />, <FaHtml5 />]
     }
 ];
 
