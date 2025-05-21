@@ -1,92 +1,39 @@
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import { useEffect } from "react";
+import { Particles } from "@tsparticles/react";
 
 function ParticlesBackground() {
-    const particlesInit = async (engine) => {
-        console.log("Initializing particles...", engine)
-        try {
-            await loadFull(engine);
-        } catch (err) {
-            console.error("Error initializing particles:", err);
-        }
-    }
+    useEffect(() => {
+        console.log("ParticlesBackground component rendered");
+    }, []);
 
+    // Minimal working config from tsparticles docs
     const particlesOptions = {
-        background: {
-            color: {
-                value: "#000000", // Dark background
-            },
-        },
         particles: {
             number: {
-                value: 75,
-                density: {
-                    enable: true,
-                    area: 800,
-                },
-            },
-            color: {
-                value: "#ffffff",
-            },
-            links: {
-                enable: true,
-                distance: 150,
-                color: "#ffffff",
-                opacity: 0.3,
-                width: 1,
-            },
-            move: {
-                enable: true,
-                speed: 2,
-                direction: "none",
-                random: false,
-                straight: false,
-                outModes: {
-                    default: "bounce",
-                },
-            },
-            shape: {
-                type: "circle",
+                value: 50,
             },
             size: {
-                value: { min: 1, max: 4},
+                value: 3,
             },
-        },
-        interactivity: {
-            events: {
-                onHover: {
-                    enable: true,
-                    mode: "repulse",
-                },
-                onClick: {
-                    enable: true,
-                    mode: "push",
-                },
-            },
-            modes: {
-                repulse: {
-                    distance: 100,
-                },
-                push: {
-                    quantity: 4,
-                },
-            },
-        },
-        fullScreen: {
-            enable: false,
-            zIndex: 0,
         },
     };
 
     return (
-        <div style={{ position: "absolute", width: "100vw", height: "100vh", zIndex: 0 }}>
-            <Particles
-                id="tsparticles"
-                init={particlesInit}
-                options={particlesOptions}
-                style={{ position: "absolute", width: "100vw", height: "100vh", zIndex: 0 }}/>
+        <div style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            zIndex: 0,
+            background: "rgba(255,0,0,0.2)" // visible background for debug
+        }}>
+            {console.log("[DEBUG] Before rendering <Particles />")}
+            <Particles id="tsparticles" options={particlesOptions} />
+            {console.log("[DEBUG] After rendering <Particles />")}
+            <span style={{color: 'red', position: 'absolute', top: 10, left: 10, zIndex: 10}}>[DEBUG] If you see this, Particles did not render.</span>
         </div>
-    )
+    );
 }
 
 export default ParticlesBackground;

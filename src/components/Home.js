@@ -9,7 +9,7 @@ function Home() {
             {/* <h3>Hi, I'm Yash</h3>
             <a href="https://github.com/"><FaGithub /></a> */}
         </section>
-    )
+    );
 }
 
 export default Home;
