@@ -28,7 +28,7 @@ function Home() {
             <section id="home" className="home">
                 <h3>Hi, I'm Yash</h3>
                 <TypewriterText />
-                <a href="https://github.com/"><FaGithub /></a>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
             </section>
         </div>
     );
