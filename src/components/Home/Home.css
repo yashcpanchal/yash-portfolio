@@ -11,6 +11,11 @@
     pointer-events: none;
 }
 
+.typewriter {
+    color: 'red';
+    font-weight: 'bold';
+}
+
 .home h3 {
     pointer-events: auto;
 }
