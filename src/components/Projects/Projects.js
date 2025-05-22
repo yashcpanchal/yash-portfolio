@@ -1,8 +1,8 @@
 import './Projects.css';
-import projectsData from './ProjectsData.js';
+import projectsData from '../Data/ProjectsData.js';
 function Projects() {
     return (
-        <div>
+        <div id="projects">
         <h2>Projects</h2>
         <section className="projects">
             {projectsData.map((project, index) => (

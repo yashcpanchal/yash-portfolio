@@ -1,0 +1,20 @@
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: -100vh;
+    z-index: 0;
+    overflow: wrap;
+    pointer-events: none;
+}
+
+.home h3 {
+    pointer-events: auto;
+}
+
+.home a {
+    pointer-events: auto;
+}

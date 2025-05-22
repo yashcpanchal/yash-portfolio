@@ -1,10 +1,10 @@
 import "./Skills.css";
-import skillsData from "./SkillsData.js";
+import skillsData from "../Data/SkillsData.js";
 function Skills() {
     return (
         <div>
         <h2>Skills</h2>
-        <section className='skills'>
+        <section id="skills" className='skills'>
             {skillsData.map((skills, index) => (
                 <div className='skillcard' key={index}>
                     <h3>{skills.section}</h3>
