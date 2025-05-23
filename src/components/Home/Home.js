@@ -14,9 +14,9 @@ function Home() {
                         loop={true}
                         cursor
                         cursorStyle="|"
-                        typeSpeed={70}
-                        deleteSpeed={50}
-                        delaySpeed={1000}
+                        typeSpeed={150}
+                        deleteSpeed={100}
+                        delaySpeed={2000}
                     />
                 </span>
             </h1>
