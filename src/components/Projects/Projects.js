@@ -9,7 +9,7 @@ function Projects() {
                 <div className="project_card" key={index}>
                     <h3>{project.name}</h3>
                     <p>{project.description}</p>
-                    <a href={project.github}> Github Link </a>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer"> Github Link </a>
                     <div className="icons">
                     {project.icons.map((icon, key) => (
                         <span key={key}>{icon}</span>

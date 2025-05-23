@@ -1,30 +1,54 @@
 .skills {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1.5rem;
-    max-width: 100%;
+    max-width: 90%;
     margin: 0 auto;
-    justify-content: center;
-    gap: 2rem;
+    padding: 2rem 0;
 }
 
 .skillcard {
-    background-color: var(--navbar-color);
+    background-color: #1a1a1a; /* Dark background */
+    color: white;
     padding: 1.5rem;
-    margin-bottom: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2x 8px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20%;
-    min-width: 300px; /* needs to be tailored to content*/
-    justify-content: space-between; /* spaces out internal content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skillcard side {
-    display: flex; /* makes items go side by side */
-    align-items: center; /* vertically aligns items */
-    gap: 20px; /* adds space between the image and the text*/
+.skillcard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(255, 0, 0, 0.4); /* Red flair */
+}
+
+.entries {
+}
+
+.side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+    border-radius: 80px;
+    background-color: black;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    color: red !important; /* Red flair for buttons */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: white; /* Change color on hover */
+    transform: scale(1.2); /* Slight zoom effect */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.swiper-pagination-bullet {
+    background: red !important; /* Red pagination dots */
 }
