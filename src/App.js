@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import AnimationWrapper from './components/Animations/AnimationWrapper.js'
 import Navbar from './components/Navbar/Navbar.js';
 import Home from './components/Home/Home.js';
 import Projects from './components/Projects/Projects.js'
@@ -12,10 +13,18 @@ function App() {
     <div className="App">
       <Home />
       <Navbar />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
+      <AnimationWrapper>
+        <About />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <Projects />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <Skills />
+      </AnimationWrapper>
+      <AnimationWrapper>
+        <Contact />
+      </AnimationWrapper>
     </div>
   );
 }
