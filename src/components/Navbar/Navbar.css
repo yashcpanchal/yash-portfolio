@@ -1,9 +1,13 @@
 .navbar {
-    background-color: #121212; /* Dark background */
+    background-color: #121212; /*#121212*/
     position: sticky;
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid #333; /* Subtle border */
+    opacity: 0.8;
+    border-radius: 8px;
+    justify-self: center;
+    width: 95%;
 }
 
 nav {

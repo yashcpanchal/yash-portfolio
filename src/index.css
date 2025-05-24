@@ -26,7 +26,6 @@ h2 {
   color: white;
   margin-bottom: 1rem;
   max-width: 800px;
-  border-bottom: 2px solid red; /* gives the underline */
   padding-bottom: 0.5rem; /* creates spacing around the text */
   margin: 0 auto;
   margin-bottom: 2rem;
