@@ -1,5 +1,9 @@
 :root {
-  --navbar-color: rgb(37, 36, 36);
+  --color-black: #000500;
+  --color-blue-flair: #473BF0;
+  --color-slate-blue: #6665DD;
+  --color-cool-gray: #9B9ECE;
+  --color-french-gray: #ACADBC;
 }
 
 html {
@@ -13,7 +17,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background-color: var(--color-black);
 }
 
 code {
@@ -23,7 +27,7 @@ code {
 
 h2 {
   font-size: 2.2rem;
-  color: #fff;
+  color: var(--color-french-gray);
   font-weight: 700;
   letter-spacing: 1px;
   text-align: center;
@@ -43,27 +47,32 @@ h2::after {
   border-radius: 2px;
   background: linear-gradient(90deg, rgba(255,0,0,0.7) 0%, rgba(255,0,0,0.2) 100%);
   opacity: 0.8;
+  background: linear-gradient(
+    90deg,
+    var(--color-blue-flair) 0%,
+    var(--color-slate-blue) 100%
+  );
 }
 
 h2 span {
-  color: #ff003c;
+  color: var(--color-blue-flair);
   font-weight: 900;
   letter-spacing: 2px;
 }
 
 h3 {
   font-size: 1rem;
-  color: white;
+  color: var(--color-cool-gray);
 }
 
 h4 {
-  color: white;
+  color: var(--color-cool-gray);
 }
 
 svg {
-  color: red;
+  color: var(--color-blue-flair);
 }
 
 p {
-  color: white;
+  color: var(--color-cool-gray);
 }
