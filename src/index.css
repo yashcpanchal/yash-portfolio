@@ -1,10 +1,35 @@
+/* Light mode variables (default) */
 :root {
-  --color-black: #000500;
-  --color-blue-flair: #473BF0;
-  --color-slate-blue: #6665DD;
-  --color-cool-gray: #ACADBC; /*#9B9ECE*/
-  --color-french-gray: #ACADBC;
-  --color-charcoal-gray: #0B132B; /*#1A1C24*/
+  --color-navbar-bg: #f0f0f0;
+  --color-background: #ffffff;
+  --color-text-primary: #4B5563; /* A balanced dark gray for all text */
+  --color-text-secondary: #555555; /* For less important text if needed */
+  --color-accent: #473BF0;
+  --color-accent-hover: #6665DD;
+
+  /* Universal theme variables */
+  --background-color: var(--color-background);
+  --text-color-primary: var(--color-text-primary);
+  --text-color-secondary: var(--color-text-secondary);
+  --card-background: #ffffff;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --input-background: #ffffff;
+  --navbar-background: var(--color-navbar-bg);
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  --color-navbar-bg: #1F2937; /* Lighter dark gray for navbar */
+  --color-background: #000500;
+  --color-text-primary: #D1D5DB; /* Lighter gray for all primary text */
+  --color-text-secondary: #ACADBC; /* For less important text */
+  
+  --background-color: var(--color-background);
+  --navbar-background: var(--color-navbar-bg);
+
+  --card-background: #000500;
+  --card-shadow: 0 4px 12px rgba(71, 59, 240, 0.10);
+  --input-background: #000500;
 }
 
 html {
@@ -18,7 +43,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-black);
+  background-color: var(--background-color);
+  color: var(--text-color-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 code {
@@ -26,9 +53,12 @@ code {
     monospace;
 }
 
+h1, h2 {
+    color: var(--text-color-primary);
+}
+
 h2 {
   font-size: 2.2rem;
-  color: var(--color-french-gray);
   font-weight: 700;
   letter-spacing: 1px;
   text-align: center;
@@ -49,30 +79,21 @@ h2::after {
   opacity: 0.8;
   background: linear-gradient(
     90deg,
-    var(--color-blue-flair) 0%,
-    var(--color-slate-blue) 100%
+    var(--color-accent) 0%,
+    var(--color-accent-hover) 100%
   );
 }
 
 h2 span {
-  color: var(--color-blue-flair);
+  color: var(--color-accent);
   font-weight: 900;
   letter-spacing: 2px;
 }
 
-h3 {
-  font-size: 1rem;
-  color: var(--color-cool-gray);
-}
-
-h4 {
-  color: var(--color-cool-gray);
+h3, h4, p {
+  color: var(--text-color-secondary);
 }
 
 svg {
-  color: var(--color-blue-flair);
-}
-
-p {
-  color: var(--color-cool-gray);
+  color: var(--color-accent);
 }

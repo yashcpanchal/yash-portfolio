@@ -7,12 +7,17 @@
     position: relative;
     margin-top: -100vh;
     z-index: 0;
-    overflow: wrap;
+    overflow: hidden;
     pointer-events: none;
 }
 
+.home h1 {
+    /* The color is now inherited from the h1 style in index.css */
+    pointer-events: auto;
+}
+
 .typewriter {
-    color: var(--color-blue-flair);
+    color: var(--color-accent);
     font-weight: bold;
     letter-spacing: 1.2px;
     pointer-events: auto;
@@ -20,15 +25,11 @@
 
 .home h3 {
     pointer-events: auto;
-    color: var(--color-french-gray);
+    color: var(--text-color-secondary);
     font-size: 1rem;
 }
 
 .home a {
     margin-top: 1.5rem;
-    pointer-events: auto;
-}
-
-.home h1 {
     pointer-events: auto;
 }
