@@ -12,15 +12,23 @@
 }
 
 .typewriter {
-    color: red;
-    font-weight: 'bold';
+    color: var(--color-blue-flair);
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    pointer-events: auto;
 }
 
 .home h3 {
     pointer-events: auto;
+    color: var(--color-french-gray);
+    font-size: 1rem;
 }
 
 .home a {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    pointer-events: auto;
+}
+
+.home h1 {
     pointer-events: auto;
 }

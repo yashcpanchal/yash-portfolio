@@ -1,13 +1,14 @@
 .navbar {
-    background-color: #121212; /*#121212*/
+    background-color: var(--color-charcoal-gray); /*#121212*/
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid #333; /* Subtle border */
-    opacity: 0.8;
+    border-bottom: 1px solid var(--color-slate-blue);
+    opacity: 0.92;
     border-radius: 8px;
     justify-self: center;
     width: 95%;
+    margin: 0 auto;
 }
 
 nav {
@@ -20,7 +21,7 @@ nav {
 h1 {
     font-size: 26px;
     font-weight: bold;
-    color: #f5f5f5; /* Light text */
+    color: var(--color-french-gray);
     margin: 0;
 }
 
@@ -34,14 +35,16 @@ ul {
 
 a {
     text-decoration: none;
-    color: #f5f5f5;
+    color: var(--color-french-gray);
     font-weight: 500;
     position: relative;
     transition: color 0.3s ease;
+    font-size: 1.08rem;
+    /* letter-spacing: 1px; */
 }
 
 a:hover {
-    color: red; /* Neon green hover */
+    color: var(--color-blue-flair);
 }
 
 a::after {
@@ -51,8 +54,9 @@ a::after {
     bottom: -2px;
     width: 0;
     height: 2px;
-    background-color: red;
+    background: linear-gradient(90deg, var(--color-blue-flair), var(--color-slate-blue));
     transition: width 0.3s ease;
+    border-radius: 2px;
 }
 
 a:hover::after {

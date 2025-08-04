@@ -2,8 +2,9 @@
   --color-black: #000500;
   --color-blue-flair: #473BF0;
   --color-slate-blue: #6665DD;
-  --color-cool-gray: #9B9ECE;
+  --color-cool-gray: #ACADBC; /*#9B9ECE*/
   --color-french-gray: #ACADBC;
+  --color-charcoal-gray: #0B132B; /*#1A1C24*/
 }
 
 html {
@@ -45,7 +46,6 @@ h2::after {
   width: 60px;
   height: 3px;
   border-radius: 2px;
-  background: linear-gradient(90deg, rgba(255,0,0,0.7) 0%, rgba(255,0,0,0.2) 100%);
   opacity: 0.8;
   background: linear-gradient(
     90deg,
