@@ -1,20 +1,18 @@
 .projects {
     display: flex;
     flex-direction: row;
-    align-items: stretch; /* ensures that all of the cards in a row are same height */
+    align-items: stretch;
     justify-content: center;
     gap: 2rem;
     max-width: 100%;
     margin: 0 auto;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
     margin-bottom: 10rem;
 }
 
 .project_card {
     background-color: var(--card-background);
-    color: var(--color-french-gray);
+    color: var(--color-text-body);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: var(--card-shadow);
@@ -33,13 +31,13 @@
 .project_card:hover {
     transform: translateY(-8px) scale(1.03);
     box-shadow: 0 8px 24px rgba(71,59,240,0.18), 0 2px 8px rgba(0,0,0,0.25);
-    border-color: var(--color-blue-flair);
+    border-color: var(--color-accent);
 }
 
 .project_card h3 {
     margin-top: 0;
     margin-bottom: 0.5rem;
-    color: var(--color-blue-flair);
+    color: var(--color-accent);
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -47,7 +45,7 @@
 .project_card p {
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--color-cool-gray);
+    color: var(--color-text-body);
     margin-bottom: 1rem;
 }
 
@@ -55,7 +53,7 @@
     display: inline-block;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    color: var(--color-blue-flair);
+    color: var(--color-accent);
     background: var(--card-background);
     border-radius: 8px;
     text-decoration: none;
@@ -65,20 +63,18 @@
 }
 
 .project_card a:hover {
-    color: var(--color-french-gray);
-    border-color: var(--color-slate-blue);
-    transform: translateY(-2px) scale(1.05);
+    color: var(--color-accent-hover);
     text-decoration: none;
 }
 
-.project_card svg {
-    color: var(--color-blue-flair);
-    font-size: 2.5rem;
-    margin-bottom: 0.2rem;
+.project_card .icons svg {
+    color: var(--color-text-body);
+    font-size: 1.5rem; /* Adjusted for better spacing */
+    margin: 0 0.5rem;
     transition: color 0.2s, filter 0.2s;
 }
 
-.project_card:hover svg {
-    color: var(--color-slate-blue);
-    filter: drop-shadow(0 0 8px var(--color-blue-flair));
+.project_card:hover .icons svg {
+    color: var(--color-accent);
+    filter: drop-shadow(0 0 8px var(--color-accent));
 }

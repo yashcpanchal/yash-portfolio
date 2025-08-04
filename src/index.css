@@ -1,35 +1,31 @@
-/* Light mode variables (default) */
+/* Light Mode (Default) */
 :root {
-  --color-navbar-bg: #f0f0f0;
   --color-background: #ffffff;
-  --color-text-primary: #4B5563; /* A balanced dark gray for all text */
-  --color-text-secondary: #555555; /* For less important text if needed */
+  --color-navbar-bg: #f8f9fa;
+  --color-card-bg: #ffffff;
+  --color-input-bg: #ffffff;
+  
+  --color-text-header: #343a40; /* For h1, h2, Navbar text */
+  --color-text-body: #6c757d;   /* For p, h3, h4 */
+
   --color-accent: #473BF0;
   --color-accent-hover: #6665DD;
+  --color-button-text: #ffffff;
 
-  /* Universal theme variables */
-  --background-color: var(--color-background);
-  --text-color-primary: var(--color-text-primary);
-  --text-color-secondary: var(--color-text-secondary);
-  --card-background: #ffffff;
-  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  --input-background: #ffffff;
-  --navbar-background: var(--color-navbar-bg);
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Dark mode overrides */
+/* Dark Mode Overrides */
 body.dark-mode {
-  --color-navbar-bg: #1F2937; /* Lighter dark gray for navbar */
   --color-background: #000500;
-  --color-text-primary: #D1D5DB; /* Lighter gray for all primary text */
-  --color-text-secondary: #ACADBC; /* For less important text */
-  
-  --background-color: var(--color-background);
-  --navbar-background: var(--color-navbar-bg);
+  --color-navbar-bg: #0B132B;
+  --color-card-bg: #000500;
+  --color-input-bg: #000500;
 
-  --card-background: #000500;
+  --color-text-header: #E5E7EB; /* Lighter gray for headers */
+  --color-text-body: #ACADBC;   /* Lighter gray for body */
+
   --card-shadow: 0 4px 12px rgba(71, 59, 240, 0.10);
-  --input-background: #000500;
 }
 
 html {
@@ -43,8 +39,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background-color);
-  color: var(--text-color-primary);
+  background-color: var(--color-background);
+  color: var(--color-text-body);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -54,7 +50,7 @@ code {
 }
 
 h1, h2 {
-    color: var(--text-color-primary);
+    color: var(--color-text-header);
 }
 
 h2 {
@@ -91,7 +87,7 @@ h2 span {
 }
 
 h3, h4, p {
-  color: var(--text-color-secondary);
+  color: var(--color-text-body);
 }
 
 svg {

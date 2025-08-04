@@ -12,7 +12,7 @@
 }
 
 .home h1 {
-    /* The color is now inherited from the h1 style in index.css */
+    color: var(--color-text-header);
     pointer-events: auto;
 }
 
@@ -25,7 +25,7 @@
 
 .home h3 {
     pointer-events: auto;
-    color: var(--text-color-secondary);
+    color: var(--color-text-body);
     font-size: 1rem;
 }
 
