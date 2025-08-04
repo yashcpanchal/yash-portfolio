@@ -18,40 +18,38 @@
 .contact input,
 .contact textarea {
   padding: 0.75rem;
-  border: 1px solid var(--color-slate-blue);
+  border: 1px solid var(--color-accent-hover);
   border-radius: 8px;
   font-size: 1rem;
-  background-color: var(--color-black);
-  color: var(--color-french-gray);
+  background-color: var(--input-background);
+  color: var(--color-text-primary);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   resize: none;
-  transition: border-color 0.3s, background 0.3s;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
 }
 
 .contact input:focus,
 .contact textarea:focus {
-  border-color: var(--color-blue-flair);
+  border-color: var(--color-accent);
   outline: none;
-  background: var(--color-slate-blue);
-  color: var(--color-french-gray);
+  background: var(--color-navbar-bg); /* Use navbar bg for focus */
 }
 
 .contact button {
   padding: 0.75rem;
   border: none;
   border-radius: 8px;
-  background-color: var(--color-blue-flair);
-  color: var(--color-french-gray);
+  background-color: var(--color-accent);
+  color: var(--color-button-text);
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.3s, color 0.3s;
+  transition: background-color 0.3s;
   letter-spacing: 1px;
 }
 
 .contact button:hover {
-  background-color: var(--color-slate-blue);
-  color: var(--color-black);
+  background-color: var(--color-accent-hover);
 }

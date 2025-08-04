@@ -1,10 +1,31 @@
+/* Light Mode (Default) */
 :root {
-  --color-black: #000500;
-  --color-blue-flair: #473BF0;
-  --color-slate-blue: #6665DD;
-  --color-cool-gray: #ACADBC; /*#9B9ECE*/
-  --color-french-gray: #ACADBC;
-  --color-charcoal-gray: #0B132B; /*#1A1C24*/
+  --color-background: #ffffff;
+  --color-navbar-bg: #f8f9fa;
+  --color-card-bg: #ffffff;
+  --color-input-bg: #ffffff;
+  
+  --color-text-header: #343a40; /* For h1, h2, Navbar text */
+  --color-text-body: #6c757d;   /* For p, h3, h4 */
+
+  --color-accent: #473BF0;
+  --color-accent-hover: #6665DD;
+  --color-button-text: #ffffff;
+
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+  --color-background: #000500;
+  --color-navbar-bg: #0B132B;
+  --color-card-bg: #000500;
+  --color-input-bg: #000500;
+
+  --color-text-header: #E5E7EB; /* Lighter gray for headers */
+  --color-text-body: #ACADBC;   /* Lighter gray for body */
+
+  --card-shadow: 0 4px 12px rgba(71, 59, 240, 0.10);
 }
 
 html {
@@ -18,7 +39,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-black);
+  background-color: var(--color-background);
+  color: var(--color-text-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 code {
@@ -26,9 +49,12 @@ code {
     monospace;
 }
 
+h1, h2 {
+    color: var(--color-text-header);
+}
+
 h2 {
   font-size: 2.2rem;
-  color: var(--color-french-gray);
   font-weight: 700;
   letter-spacing: 1px;
   text-align: center;
@@ -49,30 +75,21 @@ h2::after {
   opacity: 0.8;
   background: linear-gradient(
     90deg,
-    var(--color-blue-flair) 0%,
-    var(--color-slate-blue) 100%
+    var(--color-accent) 0%,
+    var(--color-accent-hover) 100%
   );
 }
 
 h2 span {
-  color: var(--color-blue-flair);
+  color: var(--color-accent);
   font-weight: 900;
   letter-spacing: 2px;
 }
 
-h3 {
-  font-size: 1rem;
-  color: var(--color-cool-gray);
-}
-
-h4 {
-  color: var(--color-cool-gray);
+h3, h4, p {
+  color: var(--color-text-body);
 }
 
 svg {
-  color: var(--color-blue-flair);
-}
-
-p {
-  color: var(--color-cool-gray);
+  color: var(--color-accent);
 }

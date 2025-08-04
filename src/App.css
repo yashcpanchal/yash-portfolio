@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  /* This is the fix: Prevents horizontal scrolling on the main app container */
+  overflow-x: hidden;
 }
 
 .App-logo {
