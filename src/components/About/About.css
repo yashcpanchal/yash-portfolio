@@ -4,6 +4,7 @@
     margin: 0 auto; /* centers the section horizontally s*/
     /* margin-bottom: clamp(10rem, 0vw, rem); */
     margin-bottom: 10rem;
+    scroll-margin-top: 3rem; /* Added this line */
 }
 
 .side {

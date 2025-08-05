@@ -1,3 +1,7 @@
+#projects {
+    scroll-margin-top: 10rem; /* Added this line */
+}
+
 .projects {
     display: flex;
     flex-direction: row;

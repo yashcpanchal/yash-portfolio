@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, forwardRef } from 'react';
 import './Navbar.css';
 import { FaSun, FaMoon } from 'react-icons/fa';
 
-function Navbar({ theme, toggleTheme }) {
+const Navbar = forwardRef(({ theme, toggleTheme, isSticky }, ref) => {
     const [isAnimating, setIsAnimating] = useState(false);
 
     const handleThemeClick = () => {
@@ -13,7 +13,7 @@ function Navbar({ theme, toggleTheme }) {
     };
 
     return (
-        <div className="navbar">
+        <div ref={ref} className={`navbar ${isSticky ? 'sticky' : ''}`}>
             <nav>
                 <h1>
                     Yash's Portfolio
@@ -25,8 +25,8 @@ function Navbar({ theme, toggleTheme }) {
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li>
-                        <button 
-                            className={`theme-toggle-btn ${isAnimating ? 'animate' : ''}`} 
+                        <button
+                            className={`theme-toggle-btn ${isAnimating ? 'animate' : ''}`}
                             onClick={handleThemeClick}
                             aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
                         >
@@ -37,6 +37,6 @@ function Navbar({ theme, toggleTheme }) {
             </nav>
         </div>
     );
-}
+});
 
 export default Navbar;

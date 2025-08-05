@@ -1,0 +1,50 @@
+.home-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.home-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.home-nav a {
+    text-decoration: none;
+    color: var(--color-text-header);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+    font-size: 1.08rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.home-nav a:hover {
+    color: var(--color-accent);
+}
+
+.home-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover));
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.home-nav a:hover::after {
+    width: 100%;
+}

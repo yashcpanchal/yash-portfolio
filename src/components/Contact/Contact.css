@@ -5,6 +5,7 @@
   flex-direction: column;
   padding: 2rem;
   margin-bottom: 10rem;
+  scroll-margin-top: 5rem; /* Added this line */
 }
 
 .contact form {

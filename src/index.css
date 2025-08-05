@@ -17,15 +17,15 @@
 
 /* Dark Mode Overrides */
 body.dark-mode {
-  --color-background: #000500;
+  --color-background: #151515;  /* A lighter dark background */
   --color-navbar-bg: #0B132B;
-  --color-card-bg: #000500;
-  --color-input-bg: #000500;
+  --color-card-bg: #1a1a1a;      /* A slightly lighter card background */
+  --color-input-bg: #1a1a1a;     /* Matching input background */
 
   --color-text-header: #E5E7EB; /* Lighter gray for headers */
   --color-text-body: #ACADBC;   /* Lighter gray for body */
 
-  --card-shadow: 0 4px 12px rgba(71, 59, 240, 0.10);
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* A subtle black shadow */
 }
 
 html {

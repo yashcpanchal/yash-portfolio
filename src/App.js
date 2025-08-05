@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import AnimationWrapper from './components/Animations/AnimationWrapper.js';
 import Navbar from './components/Navbar/Navbar.js';
 import Home from './components/Home/Home.js';
@@ -19,6 +19,10 @@ function App() {
     return savedTheme || getSystemTheme();
   });
 
+  const [isNavSticky, setIsNavSticky] = useState(false);
+  const [navHeight, setNavHeight] = useState(0);
+  const navRef = useRef(null);
+
   // The toggle function now only switches between light and dark
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
@@ -38,7 +42,7 @@ function App() {
   // Effect to listen for system theme changes
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    
+
     const handleChange = (e) => {
       // Only update if the user hasn't manually set a theme
       if (!localStorage.getItem('theme')) {
@@ -50,11 +54,37 @@ function App() {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
+  // Effect to get navbar height
+  useEffect(() => {
+    if (navRef.current) {
+      setNavHeight(navRef.current.offsetHeight);
+    }
+  }, []);
+
+  // Effect to handle scroll and stickiness
+  useEffect(() => {
+    const handleScroll = () => {
+      const homeHeight = window.innerHeight; // Height of the home section
+      if (window.scrollY > homeHeight) {
+        setIsNavSticky(true);
+      } else {
+        setIsNavSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
 
   return (
     <div className="App">
       <Home />
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <Navbar ref={navRef} theme={theme} toggleTheme={toggleTheme} isSticky={isNavSticky} />
+      {/* This placeholder prevents the content jump */}
+      {isNavSticky && <div style={{ height: navHeight }} />}
       <AnimationWrapper>
         <About />
       </AnimationWrapper>

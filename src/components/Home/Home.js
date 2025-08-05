@@ -1,4 +1,5 @@
 import './Home.css';
+import './HomeNav.css'; // <-- Import the new CSS file
 import { FaGithub } from 'react-icons/fa';
 import ParticlesBackground from './ParticlesBackground';
 import { Typewriter } from 'react-simple-typewriter';
@@ -25,6 +26,14 @@ function Home() {
     return (
         // FIX: Added a container div for proper positioning context
         <div className="home-container">
+            <nav className="home-nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
             <ParticlesBackground />
             <section id="home" className="home">
                 <h3>Hi, I'm Yash</h3>
