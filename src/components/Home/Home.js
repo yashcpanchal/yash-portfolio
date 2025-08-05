@@ -23,7 +23,8 @@ function Home() {
         )
     }
     return (
-        <div>
+        // FIX: Added a container div for proper positioning context
+        <div className="home-container">
             <ParticlesBackground />
             <section id="home" className="home">
                 <h3>Hi, I'm Yash</h3>

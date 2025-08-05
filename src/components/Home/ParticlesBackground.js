@@ -8,7 +8,8 @@ function ParticlesBackground() {
     }, []);
 
 
-    return <div id="particles-js" style={{ position: 'static', width: '100vw', height: '100vh', zIndex: -1, top: 0, left: 0 }}></div>;
+    // FIX: Changed width from '100vw' to '100%' to prevent horizontal overflow
+    return <div id="particles-js" style={{ position: 'absolute', width: '100%', height: '100vh', zIndex: -1, top: 0, left: 0 }}></div>;
 }
 
 export default ParticlesBackground;
