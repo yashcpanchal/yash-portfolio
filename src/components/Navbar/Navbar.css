@@ -9,7 +9,7 @@
     justify-self: center;
     width: 95%;
     margin: 0 auto;
-    transition: background-color 0.3s ease; /* Removed transform from the transition */
+    transition: background-color 0.3s ease;
 }
 
 .navbar.sticky {

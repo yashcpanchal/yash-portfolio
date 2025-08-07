@@ -1,6 +1,6 @@
 import './Home.css';
 import './HomeNav.css'; // <-- Import the new CSS file
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import ParticlesBackground from './ParticlesBackground';
 import { Typewriter } from 'react-simple-typewriter';
 
@@ -11,7 +11,7 @@ function Home() {
                 I'm a&nbsp;
                 <span className='typewriter'>
                     <Typewriter 
-                        words={['Developer', 'Designer', 'Problem Solver']}
+                        words={['problem solver', 'computer science student', 'builder of impactful software', 'AI enthusiast', 'hardcore pythonista']}
                         loop={true}
                         cursor
                         cursorStyle="|"
@@ -38,7 +38,10 @@ function Home() {
             <section id="home" className="home">
                 <h3>Hi, I'm Yash</h3>
                 <TypewriterText />
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+                <div className="social-icons">
+                    <a href="https://github.com/yashcpanchal" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+                    <a href="https://www.linkedin.com/in/yashcpanchal/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                </div>
             </section>
         </div>
     );

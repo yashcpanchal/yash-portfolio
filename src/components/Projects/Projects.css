@@ -27,7 +27,7 @@
     min-width: 280px;
     margin-bottom: 2rem;
     transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s cubic-bezier(.4,2,.6,1), border-color 0.3s, background-color 0.3s ease;
-    border: 2px solid transparent;
+    border: 2px solid var(--color-accent-hover);
     position: relative;
     overflow: hidden;
 }
@@ -37,7 +37,6 @@
     box-shadow: 0 8px 24px rgba(71,59,240,0.18), 0 2px 8px rgba(0,0,0,0.25);
     border-color: var(--color-accent);
 }
-
 .project_card h3 {
     margin-top: 0;
     margin-bottom: 0.5rem;
@@ -71,6 +70,39 @@
     text-decoration: none;
 }
 
+.project_card .icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project_card .icons .icon-tooltip {
+    position: relative;
+}
+
+.project_card .icons .icon-tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-navbar-bg);
+    color: var(--color-accent);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    border: 1px solid var(--color-accent-hover);
+}
+
+.project_card .icons .icon-tooltip:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
 .project_card .icons svg {
     color: var(--color-text-body);
     font-size: 1.5rem; /* Adjusted for better spacing */
@@ -81,4 +113,10 @@
 .project_card:hover .icons svg {
     color: var(--color-accent);
     filter: drop-shadow(0 0 8px var(--color-accent));
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }

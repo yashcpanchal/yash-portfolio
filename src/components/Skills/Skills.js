@@ -33,7 +33,7 @@ function Skills() {
                     // --- Responsive Settings (for Larger Screens) ---
                     // This object overrides the default settings on wider screens.
                     breakpoints={{
-                        // When screen width is 2000px or more, render the 3-page carousel.
+                        // When screen width is 1350px or more, render the 3-page carousel.
                         1350: {
                             slidesPerView: 3,
                             spaceBetween: 30

@@ -1,7 +1,7 @@
 /* Light Mode (Default) */
 :root {
-  --color-background: #ffffff;
-  --color-navbar-bg: #f8f9fa;
+  --color-background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  --color-navbar-bg: #fbf7ff;
   --color-card-bg: #ffffff;
   --color-input-bg: #ffffff;
   
@@ -13,11 +13,14 @@
   --color-button-text: #ffffff;
 
   --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
 
+  /* Font Families */
+  --font-family-sans-serif: 'Plus Jakarta Sans', sans-serif;
+  --font-family-monospace: 'Space Mono', monospace;
+}
 /* Dark Mode Overrides */
 body.dark-mode {
-  --color-background: #151515;  /* A lighter dark background */
+  --color-background: linear-gradient(120deg, #0d1218 0%, #121c2f 100%);
   --color-navbar-bg: #0B132B;
   --color-card-bg: #1a1a1a;      /* A slightly lighter card background */
   --color-input-bg: #1a1a1a;     /* Matching input background */
@@ -35,14 +38,12 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-family-sans-serif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-background);
+  background: var(--color-background);
   color: var(--color-text-body);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
   /* overflow-x: hidden; <-- REMOVED THIS LINE */
 }
 
@@ -51,11 +52,13 @@ code {
     monospace;
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-sans-serif);
     color: var(--color-text-header);
 }
 
 h2 {
+  font-family: var(--font-family-monospace);
   font-size: 2.2rem;
   font-weight: 700;
   letter-spacing: 1px;

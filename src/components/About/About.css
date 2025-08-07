@@ -1,6 +1,6 @@
 .about {
     padding: 2rem;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto; /* centers the section horizontally s*/
     /* margin-bottom: clamp(10rem, 0vw, rem); */
     margin-bottom: 10rem;
@@ -10,7 +10,7 @@
 .side {
     display: flex; /* makes items go side by side */
     align-items: center; /* vertically aligns items */
-    gap: 20px; /* adds space between the image and the text*/
+    gap: 50px; /* adds space between the image and the text*/
 }
 
 .side img {
@@ -20,6 +20,7 @@
 }
 
 .side p {
-    font-size: 1.1rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
 }
