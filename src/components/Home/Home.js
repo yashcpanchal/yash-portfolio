@@ -11,7 +11,7 @@ function Home() {
                 I'm a&nbsp;
                 <span className='typewriter'>
                     <Typewriter 
-                        words={['problem solver', 'computer science student', 'builder of impactful software', 'AI enthusiast', 'hardcore pythonista']}
+                        words={['Developer', 'Designer', 'Problem Solver']}
                         loop={true}
                         cursor
                         cursorStyle="|"
@@ -38,9 +38,12 @@ function Home() {
             <section id="home" className="home">
                 <h3>Hi, I'm Yash</h3>
                 <TypewriterText />
-                <div className="social-icons">
-                    <a href="https://github.com/yashcpanchal" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-                    <a href="https://www.linkedin.com/in/yashcpanchal/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                <div className="home-links">
+                    <div className="social-icons">
+                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                    </div>
+                    <a href="/Yash_Resume.pdf" download="Yash_Panchal_Resume.pdf" className="resume-btn">View Resume</a>
                 </div>
             </section>
         </div>

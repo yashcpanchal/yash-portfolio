@@ -8,6 +8,15 @@ function Contact() {
     function handleSubmit(e) {
         e.preventDefault();
 
+        const lastSubmission = localStorage.getItem('lastSubmission');
+        const now = new Date().getTime();
+        const fiveMinutes = 5 * 60 * 1000; // 5 minutes in milliseconds
+
+        if (lastSubmission && (now - lastSubmission) < fiveMinutes) {
+            alert("You've sent a message recently. Please wait a few minutes before sending another.");
+            return;
+        }
+
         const name = form.current.from_name.value.trim();
         const email = form.current.reply_to.value.trim();
         const message = form.current.message.value.trim();
@@ -30,6 +39,7 @@ function Contact() {
             (result) => {
                 console.log(result.text);
                 alert('Message Sent');
+                localStorage.setItem('lastSubmission', now);
             }, (error) => {
                 console.log(error.text);
                 alert("Something went wrong.");

@@ -1,22 +1,44 @@
 import { useState, useEffect, useRef } from 'react';
 import './Animations.css';
 
-function AnimationWrapper({ children }) {
+function AnimationWrapper({ children, customThreshold }) {
     const [isVisible, setIsVisible] = useState(false);
     const domRef = useRef();
+    const [width, setWidth] = useState(window.innerWidth);
 
     useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    useEffect(() => {
+        let threshold;
+
+        if (customThreshold !== undefined) {
+            threshold = customThreshold;
+        } else {
+            const isDesktop = width > 768;
+            threshold = isDesktop ? 0.5 : 0.1;
+        }
+
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => setIsVisible(entry.isIntersecting));
         }, {
-            threshold: 0.5
+            threshold: threshold
         });
-        
+
         const currentElement = domRef.current;
-        observer.observe(currentElement);
-        
-        return () => observer.unobserve(currentElement);
-    }, []);
+        if (currentElement) {
+            observer.observe(currentElement);
+        }
+
+        return () => {
+            if (currentElement) {
+                observer.unobserve(currentElement);
+            }
+        };
+    }, [width, customThreshold]);
 
     return (
         <div 

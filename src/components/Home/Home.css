@@ -35,13 +35,53 @@
     font-size: 1rem;
 }
 
-.home .social-icons {
+.home-links {
     margin-top: 1.5rem;
     pointer-events: auto;
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.resume-btn {
+    background-color: var(--color-accent);
+    color: var(--color-button-text);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.resume-btn:hover {
+    background-color: var(--color-accent-hover);
+    color: var(--color-button-text);
+    transform: scale(1.05);
+}
+
+/* This will remove the underline effect from the resume button */
+.resume-btn::after {
+    display: none;
+}
+
+.home .social-icons {
+    display: flex;
+    gap: 1.5rem; /* Increased gap for better spacing */
 }
 
 .home .social-icons a {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--color-text-body);
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.home .social-icons a:hover {
+    color: var(--color-accent);
+    transform: scale(1.1);
+}
+
+/* Remove underline effect from social icons */
+.home .social-icons a::after {
+    display: none;
 }

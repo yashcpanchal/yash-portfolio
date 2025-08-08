@@ -2,7 +2,6 @@
     padding: 2rem;
     max-width: 1000px;
     margin: 0 auto; /* centers the section horizontally s*/
-    /* margin-bottom: clamp(10rem, 0vw, rem); */
     margin-bottom: 10rem;
     scroll-margin-top: 3rem; /* Added this line */
 }
@@ -23,4 +22,22 @@
     font-size: 1rem;
     line-height: 1.6;
     text-align: left;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+    .side {
+        flex-direction: column-reverse; /* Stacks items vertically, text on top */
+        gap: 2rem;
+    }
+
+    .side img {
+        max-width: 80%; /* Makes the image smaller on mobile */
+        margin-bottom: 1rem;
+    }
+
+    .side p {
+        font-size: 0.9rem; /* Slightly smaller text for mobile */
+        text-align: center;
+    }
 }

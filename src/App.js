@@ -88,10 +88,10 @@ function App() {
       <AnimationWrapper>
         <About />
       </AnimationWrapper>
-      <AnimationWrapper>
+      <AnimationWrapper customThreshold={0.2}>
         <Projects />
       </AnimationWrapper>
-      <AnimationWrapper>
+      <AnimationWrapper customThreshold={0.2}>
         <Skills />
       </AnimationWrapper>
       <AnimationWrapper>
