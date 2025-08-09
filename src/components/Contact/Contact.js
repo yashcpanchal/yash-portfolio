@@ -1,6 +1,7 @@
 import './Contact.css';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
+import { FaEnvelope, FaPhone } from 'react-icons/fa';
 
 function Contact() {
     const form = useRef();
@@ -10,10 +11,10 @@ function Contact() {
 
         const lastSubmission = localStorage.getItem('lastSubmission');
         const now = new Date().getTime();
-        const fiveMinutes = 5 * 60 * 1000; // 5 minutes in milliseconds
+        const fiveMinutes = 1 * 60 * 1000; // 1 minute in milliseconds
 
         if (lastSubmission && (now - lastSubmission) < fiveMinutes) {
-            alert("You've sent a message recently. Please wait a few minutes before sending another.");
+            alert("You've sent a message recently. Please wait 1 minute before sending another.");
             return;
         }
 
@@ -56,6 +57,16 @@ function Contact() {
                 <textarea name="message" rows="5" placeholder='Message'/>
                 <button type="submit">Send</button>
             </form>
+            <div className="contact-info">
+                <div className="contact-item">
+                    <FaEnvelope />
+                    <a href="mailto:yashcpanchal41@gmail.com">yashcpanchal41@gmail.com</a>
+                </div>
+                <div className="contact-item">
+                    <FaPhone />
+                    <a href="tel:404-933-1936">404-933-1936</a>
+                </div>
+            </div>
         </section>
     )
 }

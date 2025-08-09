@@ -1,5 +1,5 @@
 import { FaPython, FaHtml5, FaCss3, FaJs, FaNodeJs, FaDocker } from 'react-icons/fa';
-import { SiDjango, SiPandas, SiNumpy, SiPytorch, SiTensorflow, SiFirebase, SiKotlin, SiC, SiGnu, SiFastapi, SiMongodb, SiTypescript, SiNextdotjs } from 'react-icons/si';
+import { SiDjango, SiPandas, SiNumpy, SiTensorflow, SiFirebase, SiKotlin, SiC, SiGnu, SiFastapi, SiMongodb, SiTypescript, SiNextdotjs } from 'react-icons/si';
 import { DiTerminal } from "react-icons/di";
 import { GoDatabase } from "react-icons/go";
 
@@ -32,7 +32,7 @@ const projectsData = [
     },
     {
         name: "Spotify Wrapped Experience App",
-        description: "Developed Spotify Wrapped with a Django backend, integrating the Spotify API by implementing OAuth 2.0 to securely manage access and refresh tokens for persistent data fetching. Constructed a dynamic frontend with HTML, CSS, and modern JavaScript, incorporating libraries like Sortable.js to build interactive drag-and-drop game mechanics and the Spotify Web Playback SDK to provide integrated audio playback. Utilized a SQLite database to ensure data persistence, storing user profiles and personalized \"Wrapped\" reports as efficient JSON objects.",
+        description: "Developed Spotify Wrapped with a Django backend, integrating the Spotify API by implementing OAuth 2.0 to securely manage access and refresh tokens for persistent data fetching. Constructed a dynamic frontend with HTML, CSS, and modern JavaScript, incorporating libraries like Sortable.js to build interactive drag-and-drop game mechanics and the Spotify Web Playback SDK to provide integrated audio playback. Utilized a SQLite database to ensure data persistence, storing user profiles and personalized \"Wrapped\" reports.",
         github: "https://github.com/yashcpanchal/SpotifyWrapped",
         liveLink: null,
         icons: [
@@ -44,7 +44,18 @@ const projectsData = [
             { name: "SQLite", icon: <GoDatabase /> }
         ]
     },
-        {
+    {
+        name: "IMC Prosperity Trading Challenge",
+        description: "Developed a series of trading algorithms in Python, placing 79th internationally and 24th in the U.S. Implemented statistical arbitrage with volatility-adaptive thresholds, Black–Scholes options pricing with volatility smile fitting and delta-hedging, and time-series–driven trend following and mean reversion strategies. Integrated backtesting and grid search optimization to refine parameters, showcasing advanced quantitative finance, risk management, and software engineering expertise.",
+        github: null,
+        liveLink: null,
+        icons: [
+            { name: 'Python', icon: <FaPython /> },
+            { name: 'Pandas', icon: <SiPandas /> },
+            { name: 'NumPy', icon: <SiNumpy /> },
+        ]
+    },
+    {
         name: "Virtual Memory System Simulator",
         description: "Designed and implemented a virtual memory simulator in C, featuring address translation, page fault handling, and frame eviction algorithms, optimizing memory management for a 24-bit virtual address space with 16KB pages.",
         github: null,
@@ -57,14 +68,13 @@ const projectsData = [
     },
     {
         name: "Market Sentiment & Investment Strategy Analysis",
-        description: "Secured a top 50 placement out of over 2,000 teams in the UPenn Wharton Investment Competition by architecting a quantitative trading strategy in Google Colab. Used a RoBERTa model from Hugging Face to perform sentiment analysis on historical market data sourced via the Twitter API. Combined this sentiment data with fundamental financial metrics sourced from the alpha vantage API to build a predictive model and train a neural network using pytorch, successfully optimizing investment decisions based on historical performance.",
+        description: "Secured a top 50 placement out of over 2,000 teams in the UPenn Wharton Investment Competition by architecting a quantitative trading strategy in Google Colab. Used a RoBERTa model from Hugging Face to perform sentiment analysis on historical market data sourced via the Twitter API. Combined this sentiment data with fundamental financial metrics sourced from the alpha vantage API to build a predictive model.",
         github: null,
         liveLink: null,
         icons: [
             { name: 'Python', icon: <FaPython /> },
             { name: 'Pandas', icon: <SiPandas /> },
             { name: 'NumPy', icon: <SiNumpy /> },
-            { name: 'PyTorch', icon: <SiPytorch /> }
         ]
     },
         {

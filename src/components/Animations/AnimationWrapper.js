@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import './Animations.css';
 
-function AnimationWrapper({ children, customThreshold }) {
+function AnimationWrapper({ children, customThreshold, rootMargin }) {
     const [isVisible, setIsVisible] = useState(false);
     const domRef = useRef();
     const [width, setWidth] = useState(window.innerWidth);
@@ -22,11 +22,14 @@ function AnimationWrapper({ children, customThreshold }) {
             threshold = isDesktop ? 0.5 : 0.1;
         }
 
+        const options = {
+            threshold: threshold,
+            rootMargin: rootMargin || '0px'
+        };
+
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => setIsVisible(entry.isIntersecting));
-        }, {
-            threshold: threshold
-        });
+        }, options);
 
         const currentElement = domRef.current;
         if (currentElement) {
@@ -38,7 +41,7 @@ function AnimationWrapper({ children, customThreshold }) {
                 observer.unobserve(currentElement);
             }
         };
-    }, [width, customThreshold]);
+    }, [width, customThreshold, rootMargin]);
 
     return (
         <div 
