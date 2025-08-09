@@ -46,7 +46,7 @@ const projectsData = [
     },
     {
         name: "IMC Prosperity Trading Challenge",
-        description: "Developed a series of trading algorithms in Python, placing 79th internationally and 24th in the U.S. Implemented statistical arbitrage with volatility-adaptive thresholds, Black–Scholes options pricing with volatility smile fitting and delta-hedging, and time-series–driven trend following and mean reversion strategies. Integrated backtesting and grid search optimization to refine parameters, showcasing advanced quantitative finance, risk management, and software engineering expertise.",
+        description: "Developed a series of trading algorithms in Python, placing 79th internationally and 24th in the U.S. Implemented statistical arbitrage with volatility-adaptive thresholds, Black–Scholes options pricing with volatility smile fitting and delta-hedging, and time-series–driven trend following and mean reversion strategies. Also integrated backtesting and grid search optimization to refine parameters.",
         github: null,
         liveLink: null,
         icons: [
@@ -67,17 +67,6 @@ const projectsData = [
         ]
     },
     {
-        name: "Market Sentiment & Investment Strategy Analysis",
-        description: "Secured a top 50 placement out of over 2,000 teams in the UPenn Wharton Investment Competition by architecting a quantitative trading strategy in Google Colab. Used a RoBERTa model from Hugging Face to perform sentiment analysis on historical market data sourced via the Twitter API. Combined this sentiment data with fundamental financial metrics sourced from the alpha vantage API to build a predictive model.",
-        github: null,
-        liveLink: null,
-        icons: [
-            { name: 'Python', icon: <FaPython /> },
-            { name: 'Pandas', icon: <SiPandas /> },
-            { name: 'NumPy', icon: <SiNumpy /> },
-        ]
-    },
-        {
         name: "Atlanta Food Finder",
         description: "Built \"Atlanta Food Finder,\" a restaurant discovery web application, using a Django backend. Integrated the Google Maps JavaScript API and its Places library to deliver an interactive map with real-time search functionality. Developed a dynamic frontend with HTML, CSS, and JavaScript to render search results and detailed pop-up information windows for each location. Utilized Django's ORM and a SQLite database to manage user profiles and persist their favorite restaurant selections.",
         github: "https://github.com/yashcpanchal/Atlanta-Food-Finder",
@@ -91,7 +80,17 @@ const projectsData = [
             { name: "SQLite", icon: <GoDatabase /> }
         ]
     },
-
+    {
+        name: "Market Sentiment & Investment Strategy Analysis",
+        description: "Secured a top 50 placement out of over 2,000 teams in the UPenn Wharton Investment Competition by architecting a quantitative trading strategy in Google Colab. Used a RoBERTa model from Hugging Face to perform sentiment analysis on historical market data sourced via the Twitter API. Combined this sentiment data with fundamental financial metrics sourced from the alpha vantage API to build a predictive model.",
+        github: null,
+        liveLink: null,
+        icons: [
+            { name: 'Python', icon: <FaPython /> },
+            { name: 'Pandas', icon: <SiPandas /> },
+            { name: 'NumPy', icon: <SiNumpy /> },
+        ]
+    }
 ];
 
 export default projectsData;
