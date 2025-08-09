@@ -11,7 +11,7 @@ function Home() {
                 I'm a &nbsp;
                 <span className='typewriter'>
                     <Typewriter 
-                        words={['CS student', 'AI enthusiast', 'software developer', 'lifelong learner', 'python lover']}
+                        words={['CS student', 'AI enthusiast', 'software developer', 'lifelong learner']}
                         loop={true}
                         cursor
                         cursorStyle="|"
