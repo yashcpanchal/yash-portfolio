@@ -36,7 +36,7 @@ function Home() {
             </nav>
             <ParticlesBackground />
             <section id="home" className="home">
-                <h3>Hi, I'm Yash</h3>
+                <h3>Hi, I'm Yash Panchal</h3>
                 <TypewriterText />
                 <div className="home-links">
                     <div className="social-icons">
