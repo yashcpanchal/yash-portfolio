@@ -8,10 +8,10 @@ function Home() {
     function TypewriterText() {
         return (
             <h1>
-                I'm a&nbsp;
+                I'm&nbsp;
                 <span className='typewriter'>
                     <Typewriter 
-                        words={['Developer', 'Designer', 'Problem Solver']}
+                        words={['a cs student', 'an ai enthusiast', 'a software developer', 'a lifelong learner']}
                         loop={true}
                         cursor
                         cursorStyle="|"
