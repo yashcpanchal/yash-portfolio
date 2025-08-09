@@ -11,7 +11,7 @@ function About() {
                     <br /><br />
                     At present, I am developing Jobly, an AI-powered job search engine that parses and ranks thousands of URLs to match users with highly relevant opportunities based on their resumes and search intent. The platform is built using Python (FastAPI), MongoDB, and React with TypeScript and Next.js.
                     <br /><br />
-                    Alongside my academic coursework, I pursue personal and team-based projects that explore the intersection of intelligence and software. I am currently seeking research and internship opportunities in AI, systems, and full-stack development. Feel free to contact me with any inquiries at yashcpanchal41@gmail.com
+                    Alongside my academic coursework, I pursue personal and team-based projects that explore the intersection of intelligence and software. I am currently seeking research and internship opportunities in AI, systems, and full-stack development. Feel free to contact me with any inquiries at yashcpanchal41@gmail.com.
                 </p>
             </div>
         </section>
