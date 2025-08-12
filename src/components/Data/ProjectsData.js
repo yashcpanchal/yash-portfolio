@@ -7,7 +7,7 @@ const projectsData = [
     {
         name: "Automated Job Applications/Jobly",
         description: "Developing an AI agent to automate the job search process, orchestrating a multi-step discovery and application workflow using LangChain and LangGraph. This system leverages Google Gemini for generating dynamic search queries and classifying web pages and a custom NER model for job information extraction, all powered by a containerized FastAPI backend with Docker. For data persistence and retrieval, the project utilizes MongoDB, enhancing job-to-resume matching with Atlas Vector Search and semantic embeddings from sentence-transformers. Web automation and data sourcing are handled through Playwright and the Brave Search API, while a custom ranking engine built with spaCy and a weighted scoring algorithm filters and prioritizes opportunities based on comprehensive skill and experience analysis. Next.js and Typescript are used to create a dynamic frontend.",
-        github: "https://github.com/yashcpanchal/Automated-Job-Applications",
+        github: "https://github.com/yashcpanchal/Jobly",
         liveLink: null,
         icons: [
             { name: 'Python', icon: <FaPython /> },
