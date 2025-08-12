@@ -43,7 +43,7 @@ function Home() {
                         <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
                         <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
                     </div>
-                    <a href="/Yash_Resume.pdf" download="Yash_Panchal_Resume.pdf" className="resume-btn">View Resumé</a>
+                    <a href="/Yash_Panchal_Resume.pdf" download="Yash_Panchal_Resume.pdf" className="resume-btn">View Resumé</a>
                 </div>
             </section>
         </div>
