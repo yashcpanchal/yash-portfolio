@@ -56,7 +56,7 @@ const skillsData = [
             { name: "Node.js", icon: <FaNodeJs /> },
             { name: "NumPy", icon: <SiNumpy /> },
             { name: "PyTorch", icon: <SiPytorch /> },
-            { name: "React.js", icon: <FaReact /> },
+            { name: "React", icon: <FaReact /> },
             { name: "Next.js", icon: <SiNextdotjs /> },
             { name: "TensorFlow", icon: <SiTensorflow /> },
         ]
