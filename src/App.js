@@ -6,6 +6,7 @@ import Projects from './components/Projects/Projects.js';
 import About from './components/About/About.js';
 import Skills from './components/Skills/Skills.js';
 import Contact from './components/Contact/Contact.js';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 
 // Function to detect system theme preference
@@ -82,6 +83,7 @@ function App() {
   return (
     <div className="App">
       <Home />
+      <Analytics />
       <Navbar ref={navRef} theme={theme} toggleTheme={toggleTheme} isSticky={isNavSticky} />
       {/* This placeholder prevents the content jump */}
       {isNavSticky && <div style={{ height: navHeight }} />}
