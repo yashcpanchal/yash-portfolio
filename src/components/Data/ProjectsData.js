@@ -46,7 +46,7 @@ const projectsData = [
     },
     {
         name: "IMC Prosperity Trading Challenge",
-        description: "Developed a series of trading algorithms in Python, placing 79th internationally and 24th in the U.S. Implemented statistical arbitrage with volatility-adaptive thresholds, Black–Scholes options pricing with volatility smile fitting and delta-hedging, and time-series–driven trend following and mean reversion strategies. Also integrated backtesting and grid search optimization to refine parameters.",
+        description: "Developed a series of trading algorithms in Python, placing 71st internationally and 24th in the U.S. Implemented statistical arbitrage with volatility-adaptive thresholds, Black–Scholes options pricing with volatility smile fitting and delta-hedging, and time-series–driven trend following and mean reversion strategies. Also integrated backtesting and grid search optimization to refine parameters.",
         github: null,
         liveLink: null,
         icons: [
