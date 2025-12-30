@@ -40,8 +40,8 @@ function Home() {
                 <TypewriterText />
                 <div className="home-links">
                     <div className="social-icons">
-                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                        <a href="https://github.com/yashcpanchal/" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+                        <a href="https://www.linkedin.com/in/yashcpanchal/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
                     </div>
                     <a href="/Yash_Panchal_Resume.pdf" download="Yash_Panchal_Resume.pdf" className="resume-btn">View Resumé</a>
                 </div>
