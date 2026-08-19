@@ -1,38 +1,66 @@
-import { FaPython, FaHtml5, FaCss3, FaJs, FaNodeJs, FaDocker } from 'react-icons/fa';
-import { SiDjango, SiPandas, SiNumpy, SiTensorflow, SiFirebase, SiKotlin, SiC, SiGnu, SiFastapi, SiMongodb, SiTypescript, SiNextdotjs } from 'react-icons/si';
+import { FaPython, FaHtml5, FaCss3, FaJs, FaNodeJs, FaDocker, FaMicrochip, FaFlask } from 'react-icons/fa';
+import { SiDjango, SiPandas, SiNumpy, SiTensorflow, SiFirebase, SiKotlin, SiC, SiCplusplus, SiGnu, SiFastapi, SiMongodb, SiTypescript, SiNextdotjs, SiLangchain, SiQemu, SiHuggingface, SiGooglegemini } from 'react-icons/si';
 import { DiTerminal } from "react-icons/di";
 import { GoDatabase } from "react-icons/go";
 
 const projectsData = [
     {
-        name: "Automated Job Applications/Jobly",
-        description: "Developing an AI agent to automate the job search process, orchestrating a multi-step discovery and application workflow using LangChain and LangGraph. This system leverages Google Gemini for generating dynamic search queries and classifying web pages and a custom NER model for job information extraction, all powered by a containerized FastAPI backend with Docker. For data persistence and retrieval, the project utilizes MongoDB, enhancing job-to-resume matching with Atlas Vector Search and semantic embeddings from sentence-transformers. Web automation and data sourcing are handled through Playwright and the Brave Search API, while a custom ranking engine built with spaCy and a weighted scoring algorithm filters and prioritizes opportunities based on comprehensive skill and experience analysis. Next.js and Typescript are used to create a dynamic frontend.",
-        github: "https://github.com/yashcpanchal/Jobly",
+        name: "IMC Prosperity Algorithmic Trading Competition",
+        description: "Placed in the top 0.5% of the field (71st of 14,000+ teams) in IMC's global algorithmic trading competition. Built an event-driven backtester around a C++ price-time matching engine that replays 20,000+ order-book ticks per day, so strategies are evaluated against realistic fill behavior rather than mid-price assumptions. Optimized 12-parameter strategies in parallel through a cross-validated Optuna pipeline, lifting team profit roughly 46%. The strategy set spans statistical arbitrage with volatility-adaptive thresholds, Black–Scholes options pricing with volatility smile fitting and delta-hedging, and time-series-driven trend following and mean reversion.",
+        github: null,
+        liveLink: null,
+        icons: [
+            { name: 'Python', icon: <FaPython /> },
+            { name: 'C++', icon: <SiCplusplus /> },
+            { name: 'Pandas', icon: <SiPandas /> },
+            { name: 'NumPy', icon: <SiNumpy /> },
+            { name: 'Optuna', icon: <FaFlask /> }
+        ]
+    },
+    {
+        name: "xv6 Kernel Extensions",
+        description: "Extended the xv6 teaching kernel across virtual memory, concurrency, and storage. Reworked virtual memory with copy-on-write fork and lazy page allocation, cutting fork() clock cycles by 99% by deferring page copies until first write. Built a user-space threading library with create/join, locks, and condition variables that schedules entirely in userland, avoiding kernel calls on the common path. Extended the file system with per-user permissions and a two-level index, scaling maximum file size from 4MB to 4GB. Debugged throughout with GDB against QEMU.",
+        github: null,
+        liveLink: null,
+        icons: [
+            { name: 'C', icon: <SiC /> },
+            { name: 'x86 Assembly', icon: <FaMicrochip /> },
+            { name: 'QEMU', icon: <SiQemu /> },
+            { name: 'GDB', icon: <DiTerminal /> },
+            { name: 'GCC', icon: <SiGnu /> }
+        ]
+    },
+    {
+        name: "Jobly — AI-native job board",
+        description: "An AI agent that automates the job search end to end. A LangGraph + Playwright agent runs with async concurrency to discover and parse 1,000+ new job URLs in under two minutes, classifying pages and extracting structured job data along the way. Resume-to-job fit is scored from semantic vector search combined with skill, seniority, and location signals, reaching 92% user satisfaction on match quality. Built on a containerized FastAPI backend with MongoDB Atlas Vector Search for persistence and retrieval, fronted by a Next.js and TypeScript app.",
+        github: null,
         liveLink: null,
         icons: [
             { name: 'Python', icon: <FaPython /> },
             { name: 'FastAPI', icon: <SiFastapi /> },
+            { name: 'LangGraph', icon: <SiLangchain /> },
             { name: 'MongoDB', icon: <SiMongodb /> },
             { name: 'Docker', icon: <FaDocker /> },
-            { name: 'Typescript', icon: <SiTypescript /> },
+            { name: 'TypeScript', icon: <SiTypescript /> },
             { name: 'Next.js', icon: <SiNextdotjs /> }
         ]
     },
     {
-        name: "Re.Mind - Dementia Care Assistant App",
-        description: "Developed re.mind, a native Android application using Kotlin and Jetpack Compose, designed as a cognitive aid for individuals with dementia. This dual-portal platform for patients and caregivers relies on Firebase for user management and data synchronization. A key feature is the conversational AI assistant, which uses the Google Gemini Pro 1.5 API, and integrates patient data from Firebase to deliver personalized, memory-triggering support. A real-time facial recognition system was also implemented, which utilizes Google's ML Kit for on-device face detection and a TensorFlow Lite model to generate facial embeddings.",
+        name: "re.mind — real-time dementia assistant",
+        description: "A native Android app built with Kotlin and Jetpack Compose that acts as a cognitive aid for people living with dementia, with paired patient and caregiver portals synced through Firebase. An on-device TensorFlow Lite vision pipeline, fed by Google's ML Kit face detection, recognizes known faces at 90%+ accuracy with sub-200ms latency, so recognition works without a network round trip. AI-extracted insights stream to caretaker dashboards, with Gemini prompts adapted across three dementia stages to keep support appropriate to the patient's condition.",
         github: "https://github.com/yashcpanchal/re.mind",
         liveLink: null,
         icons: [
             { name: 'Kotlin', icon: <SiKotlin /> },
-            { name: 'TensorFlow', icon: <SiTensorflow /> },
+            { name: 'TensorFlow Lite', icon: <SiTensorflow /> },
+            { name: 'Gemini', icon: <SiGooglegemini /> },
             { name: 'Firebase', icon: <SiFirebase /> },
             { name: 'Node.js', icon: <FaNodeJs /> }
         ]
     },
     {
         name: "Spotify Wrapped Experience App",
-        description: "Developed Spotify Wrapped with a Django backend, integrating the Spotify API by implementing OAuth 2.0 to securely manage access and refresh tokens for persistent data fetching. Constructed a dynamic frontend with HTML, CSS, and modern JavaScript, incorporating libraries like Sortable.js to build interactive drag-and-drop game mechanics and the Spotify Web Playback SDK to provide integrated audio playback. Utilized a SQLite database to ensure data persistence, storing user profiles and personalized \"Wrapped\" reports.",
+        description: "A Django-backed take on Spotify Wrapped. Integrated the Spotify API with OAuth 2.0, managing access and refresh tokens for persistent data fetching, and built an interactive frontend with drag-and-drop game mechanics via Sortable.js and in-page audio through the Spotify Web Playback SDK. User profiles and generated \"Wrapped\" reports persist in SQLite.",
         github: "https://github.com/yashcpanchal/SpotifyWrapped",
         liveLink: null,
         icons: [
@@ -45,30 +73,8 @@ const projectsData = [
         ]
     },
     {
-        name: "IMC Prosperity Trading Challenge",
-        description: "Developed a series of trading algorithms in Python, placing 71st internationally and 24th in the U.S. Implemented statistical arbitrage with volatility-adaptive thresholds, Black–Scholes options pricing with volatility smile fitting and delta-hedging, and time-series–driven trend following and mean reversion strategies. Also integrated backtesting and grid search optimization to refine parameters.",
-        github: null,
-        liveLink: null,
-        icons: [
-            { name: 'Python', icon: <FaPython /> },
-            { name: 'Pandas', icon: <SiPandas /> },
-            { name: 'NumPy', icon: <SiNumpy /> },
-        ]
-    },
-    {
-        name: "Virtual Memory System Simulator",
-        description: "Designed and implemented a virtual memory simulator in C, featuring address translation, page fault handling, and frame eviction algorithms, optimizing memory management for a 24-bit virtual address space with 16KB pages.",
-        github: null,
-        liveLink: null,
-        icons: [
-            { name: 'C', icon: <SiC /> },
-            { name: 'GDB', icon: <DiTerminal /> },
-            { name: 'GCC', icon: <SiGnu /> }
-        ]
-    },
-    {
         name: "Atlanta Food Finder",
-        description: "Built \"Atlanta Food Finder,\" a restaurant discovery web application, using a Django backend. Integrated the Google Maps JavaScript API and its Places library to deliver an interactive map with real-time search functionality. Developed a dynamic frontend with HTML, CSS, and JavaScript to render search results and detailed pop-up information windows for each location. Utilized Django's ORM and a SQLite database to manage user profiles and persist their favorite restaurant selections.",
+        description: "A restaurant discovery web app on a Django backend, using the Google Maps JavaScript API and its Places library for an interactive map with real-time search. The frontend renders results and detailed pop-up info windows per location, while Django's ORM and SQLite manage user profiles and saved favorites.",
         github: "https://github.com/yashcpanchal/Atlanta-Food-Finder",
         liveLink: null,
         icons: [
@@ -82,13 +88,14 @@ const projectsData = [
     },
     {
         name: "Market Sentiment & Investment Strategy Analysis",
-        description: "Secured a top 50 placement out of over 2,000 teams in the UPenn Wharton Investment Competition by architecting a quantitative trading strategy in Google Colab. Used a RoBERTa model from Hugging Face to perform sentiment analysis on historical market data sourced via the Twitter API. Combined this sentiment data with fundamental financial metrics sourced from the alpha vantage API to build a predictive model.",
+        description: "Top 50 finish out of 2,000+ teams in the UPenn Wharton Investment Competition. Architected a quantitative trading strategy that ran a Hugging Face RoBERTa model over historical market chatter sourced through the Twitter API, then combined that sentiment signal with fundamental financial metrics from Alpha Vantage to build a predictive model.",
         github: null,
         liveLink: null,
         icons: [
             { name: 'Python', icon: <FaPython /> },
             { name: 'Pandas', icon: <SiPandas /> },
             { name: 'NumPy', icon: <SiNumpy /> },
+            { name: 'Hugging Face', icon: <SiHuggingface /> }
         ]
     }
 ];

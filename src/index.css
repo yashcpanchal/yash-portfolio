@@ -14,6 +14,11 @@
 
   --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 
+  /* Cards (Projects, Skills, Experience) read from this. It was previously
+     undefined, so cards resolved to transparent — kept as transparent here to
+     preserve the existing look. Set to var(--color-card-bg) for solid cards. */
+  --card-background: transparent;
+
   /* Font Families */
   --font-family-sans-serif: 'Plus Jakarta Sans', sans-serif;
   --font-family-monospace: 'Space Mono', monospace;

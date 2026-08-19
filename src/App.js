@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import AnimationWrapper from './components/Animations/AnimationWrapper.js';
 import Navbar from './components/Navbar/Navbar.js';
 import Home from './components/Home/Home.js';
+import Experience from './components/Experience/Experience.js';
 import Projects from './components/Projects/Projects.js';
 import About from './components/About/About.js';
 import Skills from './components/Skills/Skills.js';
@@ -89,6 +90,9 @@ function App() {
       {isNavSticky && <div style={{ height: navHeight }} />}
       <AnimationWrapper>
         <About />
+      </AnimationWrapper>
+      <AnimationWrapper customThreshold={0.01} rootMargin="-20% 0px -20% 0px">
+        <Experience />
       </AnimationWrapper>
       <AnimationWrapper customThreshold={0.01} rootMargin="-20% 0px -20% 0px">
         <Projects />

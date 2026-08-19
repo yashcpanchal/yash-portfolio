@@ -11,7 +11,7 @@ function Home() {
                 I'm a &nbsp;
                 <span className='typewriter'>
                     <Typewriter 
-                        words={['CS student', 'AI enthusiast', 'software developer', 'lifelong learner']}
+                        words={['backend engineer', 'systems programmer', 'ML researcher', 'CS student @ Georgia Tech']}
                         loop={true}
                         cursor
                         cursorStyle="|"
@@ -29,6 +29,7 @@ function Home() {
             <nav className="home-nav">
                 <ul>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
